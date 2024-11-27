@@ -27,7 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <StoreProvider>{children}</StoreProvider>
+        <StoreProvider>
+          <div className="min-h-screen flex items-center justify-center bg-blue-500">
+            <h1 className="text-4xl font-bold text-white">Tailwind CSS Test</h1>
+          </div>
+          {children}
+        </StoreProvider>
       </body>
     </html>
   );
